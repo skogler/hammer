@@ -36,8 +36,8 @@ INSTALLLOG=install.log # Install output
 # Dependencies
 CEGUI=cegui-0.8.2
 CEGUI_DOWNLOAD=cegui-0.8.2.tar.gz
-OGRE=ogre_1_8_1
-OGRE_DOWNLOAD=ogre_src_v1-8-1.tar.bz2
+OGRE=ogre_1_9_0RC2
+OGRE_DOWNLOAD=v1-9-0RC2.tar.bz2
 CG=Cg_3.1.0013
 CG_DOWNLOAD=Cg-3.1_April2012
 
@@ -273,7 +273,7 @@ elif [ "$1" = "install-deps" ] ; then
     cd $DEPS_SOURCE
     if [ ! -d $OGRE ]; then
       echo "  Downloading..."
-      curl -C - -OL http://downloads.sourceforge.net/sourceforge/ogre/$OGRE_DOWNLOAD
+      curl -C - -OL https://bitbucket.org/sinbad/ogre/get/$OGRE_DOWNLOAD
       mkdir -p $OGRE
       cd $OGRE
       tar -xjf ../$OGRE_DOWNLOAD
