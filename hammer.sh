@@ -37,8 +37,10 @@ MAKELOG=build.log      # Make output
 INSTALLLOG=install.log # Install output
 
 # Dependencies
-CEGUI=cegui-0.8.2
-CEGUI_DOWNLOAD=cegui-0.8.2.tar.gz
+CEGUI_URL=https://bitbucket.org/cegui/cegui/get/
+CEGUI=cegui-0.8.x
+#CEGUI=cegui-0.8.2
+CEGUI_DOWNLOAD=v0-8.tar.bz2
 OGRE=ogre_1_9_0RC2
 OGRE_DOWNLOAD=v1-9-0RC2.tar.bz2
 CG=Cg_3.1.0013
@@ -387,8 +389,9 @@ elif [ "$1" = "install-deps" ] ; then
     cd $DEPS_SOURCE
     if [ ! -d $CEGUI ] ; then
       echo "  Downloading..."
-      curl -C - -OL http://downloads.sourceforge.net/sourceforge/crayzedsgui/$CEGUI_DOWNLOAD
-      tar zxvf $CEGUI_DOWNLOAD
+      curl -OL $CEGUI_URL$CEGUI_DOWNLOAD
+      tar xaf $CEGUI_DOWNLOAD
+      mv cegui-cegui* $CEGUI
       if [[ $OSTYPE == *darwin* ]] ; then
         echo "  Patching..."
         cd $DEPS_SOURCE/$CEGUI
