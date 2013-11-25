@@ -41,8 +41,8 @@ CEGUI_URL=https://bitbucket.org/cegui/cegui/get/
 CEGUI=cegui-0.8.x
 #CEGUI=cegui-0.8.2
 CEGUI_DOWNLOAD=v0-8.tar.bz2
-OGRE=ogre_1_9_0RC2
-OGRE_DOWNLOAD=v1-9-0RC2.tar.bz2
+OGRE=ogre_1_9_0
+OGRE_DOWNLOAD=v1-9-0.tar.bz2
 CG=Cg_3.1.0013
 CG_DOWNLOAD=Cg-3.1_April2012
 
